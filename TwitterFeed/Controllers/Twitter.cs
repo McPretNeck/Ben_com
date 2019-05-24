@@ -45,6 +45,50 @@ namespace TwitterFeed.Controllers
             return response;
         }
 
+        public string FeedToHTML(string feed, int startPunt,string userName)
+        {   //feed is de string die vanuit deze class van twitter gehaalt word.
+            //startPunt is voor het vinden van de eerst volgende tweet.
+            //userName voor het gemak. 
+
+            //lijsten met de tweets 
+            List<string> text = new List<string>();
+            string tweetbodys = "";
+
+            //Het samen voegen van alle tweets
+            for (int i = 0; i < GetNumberTweets(feed); i++)
+            {
+                //het begin van de twwets vinden
+                int split = feed.Substring(startPunt).IndexOf("location");
+                string tweet = feed.Substring(startPunt);
+
+                //de body van de tweet isoleren.
+                int textIn = tweet.IndexOf("\"text");
+                int textEnd = tweet.Substring(textIn + 8, 280).IndexOf("\",\"");
+                text.Add(tweet.Substring(textIn + 8, textEnd));
+
+                //nieuw startpunt instellen
+                startPunt += split + 20;
+            }
+
+            //Het opstellen van de tweet voor op de website.
+            for (int x = 0; x < text.Count(); x++)
+            {
+                tweetbodys += ("<p>" + userName + "</p><p>");
+                tweetbodys += ("<p>" + text[x] + "</p><br/><br/>");
+            }
+            return tweetbodys;
+        }
+        public int GetNumberTweets(string feed)
+        {   //om te kijken hoeveel tweets er zijn. maakt het makkelijker in de forloop.
+            
+            //de hoeveelheid tweets ophalen.
+            int tweetsIndex = feed.IndexOf("\"statuses_count\":");
+            int tweetsIndexEnd = feed.Substring(tweetsIndex).IndexOf(",");
+            int numberOfTweets = Convert.ToInt32(feed.Substring(tweetsIndex + 17, tweetsIndexEnd - 17));
+
+            return numberOfTweets;
+        }
+
         public string GetFeed(string screenName, int count)
         {
             string resourceUrl =
@@ -218,4 +262,6 @@ namespace TwitterFeed.Controllers
             return body.ToString();
         }
     }
+
+
 }
