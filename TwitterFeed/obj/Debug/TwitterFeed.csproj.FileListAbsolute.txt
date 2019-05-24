@@ -74,3 +74,11 @@ C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\obj\Debug\Twitte
 C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\obj\Debug\TwitterFeed.csproj.CopyComplete
 C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\obj\Debug\TwitterFeed.dll
 C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\obj\Debug\TwitterFeed.pdb
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Autofac.dll
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Nito.AsyncEx.Context.dll
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Nito.AsyncEx.Tasks.dll
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Nito.Disposables.dll
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Autofac.xml
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Nito.AsyncEx.Context.xml
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Nito.AsyncEx.Tasks.xml
+C:\Users\Pretzel\OneDrive\projecten\bencom_opdracht\TwitterFeed\bin\Nito.Disposables.xml
