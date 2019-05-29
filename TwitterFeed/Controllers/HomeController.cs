@@ -20,7 +20,7 @@ namespace TwitterFeed.Controllers
             
             //data door sturen naar de index pagina.
             ViewData["number"] = numberOfTweets;
-            ViewData["tweetbodys"]= twitter.FeedToHTML(feed, userName);
+            ViewData["tweetbodys"]= twitter.FeedToHTML(feed, 0, userName);
             return View();
         }
 
